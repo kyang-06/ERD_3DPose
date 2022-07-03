@@ -38,7 +38,7 @@ Pose Estimation from 2D Joint Locations.
     unzip checkpoint.zip
     ```
 
-#Results
+# Results
 Here are the results of released pretrained model correspoding to Table 3 in the paper.
 
 | **Lifting Network** | **Root Joint Locations** | **Weights&Error on GT2D** | **Weights&Error on DET2D** | **Note** |
@@ -46,11 +46,11 @@ Here are the results of released pretrained model correspoding to Table 3 in the
 | Martinez et al.     | GTRoot | ERD(lifting) : 32.6(37.6) | ERD(lifting) : 50.0(53.5)        | Use PCA|
 | Ci et al.           | GTRoot | ERD(lifting) : 35.4(39.1) | ERD(lifting) : 50.2(53.4)    |
 | Zhao et al.         | GTRoot | ERD(lifting) : 37.4(40.7) | ERD(lifting) : 52.9(56.6)    |
-|                     |                          |                   |                    |
 
 
 ## Experiment
-####Training lifting model 
+**Training lifting model**
+
 1\. For different input source of 2D pose, change ```--input```
 ```gt
 python main.py --exp lifting_linear_gt --stage lifting  --lifting_model linear --input gt
@@ -66,7 +66,7 @@ python main.py --exp lifting_lcn_gt --stage lifting --lifting_model lcn --knn 3 
 python main.py --exp lifting_semgcn_gt --stage lifting --lifting_model semgcn --num_block 4 --hidsize 128 --input gt
 ```
 
-####Testing lifting model
+**Testing lifting model**
 ```linear, gt
 python main.py --exp eval_lifting_linear_gt --test --lifting_model linear \
                --input gt --load checkpoint/lifting_linear_gt/ckpt_best.pth.tar
@@ -74,7 +74,8 @@ python main.py --exp eval_lifting_linear_gt --test --lifting_model linear \
 
 
 ---
-####Training residual regressors
+**Training residual regressors**
+
 1\. For different feature reconstruction type (Table 2 in the paper), change ```--inc_input_type```
 ```Proj2D
 python main.py --exp ERD_linear_gt_proj --stage increment \
@@ -90,7 +91,8 @@ python main.py --exp ERD_linear_gt_delta --stage increment \
 ```
 
 ---
-####Testing residual regressors
+**Testing residual regressors**
+
 ```
 python main.py --exp eval_ERD_linear_gt_delta --test --stage increment \
                --lifting_model linear --input gt \
@@ -99,7 +101,8 @@ python main.py --exp eval_ERD_linear_gt_delta --test --stage increment \
 ```
 ---
 
-####Using PCA to normalize input data
+**Using PCA to normalize input data**
+
 When ```stage=lifting```
 ```
 python main.py --exp lifting_linear_gt_pca --stage lifting  --lifting_model linear \
