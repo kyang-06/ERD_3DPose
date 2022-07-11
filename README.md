@@ -44,9 +44,9 @@ Here are the results of released pretrained model correspoding to Table 3 in the
 
 | **Lifting Network** | **Root Joint Locations** | **Weights&Error on GT2D** | **Weights&Error on DET2D** | **Note** |
 |:-------------------:|:------------------------:|:-----------------:|:------------------:|:------------------:|
-| SimpleBaseline [Martinez et al.]     | GTRoot | ERD (baseline) : 32.6 (37.6) | ERD (baseline) : 50.0 (53.5)        | Use PCA|
-| LCN [Ci et al.]           | GTRoot | ERD (baseline) : 35.4 (39.1) | ERD (baseline) : 50.2 (53.4)    |
-| SemGCN [Zhao et al.]         | GTRoot | ERD (baseline) : 37.4 (40.7) | ERD (baseline) : 52.9 (56.6)    |
+| SimpleBaseline<br>[Martinez et al. ICCV'17]     | GTRoot | ERD (baseline) : 32.6 (37.6) | ERD (baseline) : 50.0 (53.5)        | Use PCA|
+| LCN<br>[Ci et al. ICCV'19]           | GTRoot | ERD (baseline) : 35.4 (39.1) | ERD (baseline) : 50.2 (53.4)    |
+| SemGCN<br>[Zhao et al. CVPR'19]         | GTRoot | ERD (baseline) : 37.4 (40.7) | ERD (baseline) : 52.9 (56.6)    |
 
 
 ## Experiment
