@@ -1,14 +1,15 @@
-# ERD 3DPose
+# ERD-3DPose
+by Yangyuxuan Kang, Anbang Yao, Shandong Wang, Ming Lu, Yurong Chen, Enhua Wu.
 
-This project is the official implementation of Explicit Residual Descent for 3D Human
-Pose Estimation from 2D Joint Locations.
+This project is the official implementation of ["Explicit Residual Descent for 3D Human
+Pose Estimation from 2D Joint Locations"](https://www.bmvc2020-conference.com/assets/papers/0151.pdf), accepted by BMVC 2020.
+We provide Pytorch code and pretrained model for reproduction. Experiments are conducted on Human3.6M dataset.
 
-![framework](./teaser/framework.png)
+<p align="center">
+    <img src="./teaser/framework.png" height="400">
+</p>
 
 
-### Datasets
-
- * Human3.6M
 
 ## Dependencies
 
@@ -43,9 +44,9 @@ Here are the results of released pretrained model correspoding to Table 3 in the
 
 | **Lifting Network** | **Root Joint Locations** | **Weights&Error on GT2D** | **Weights&Error on DET2D** | **Note** |
 |:-------------------:|:------------------------:|:-----------------:|:------------------:|:------------------:|
-| Martinez et al.     | GTRoot | ERD(lifting) : 32.6(37.6) | ERD(lifting) : 50.0(53.5)        | Use PCA|
-| Ci et al.           | GTRoot | ERD(lifting) : 35.4(39.1) | ERD(lifting) : 50.2(53.4)    |
-| Zhao et al.         | GTRoot | ERD(lifting) : 37.4(40.7) | ERD(lifting) : 52.9(56.6)    |
+| SimpleBaseline [Martinez et al.]     | GTRoot | ERD (baseline) : 32.6 (37.6) | ERD (baseline) : 50.0 (53.5)        | Use PCA|
+| LCN [Ci et al.]           | GTRoot | ERD (baseline) : 35.4 (39.1) | ERD (baseline) : 50.2 (53.4)    |
+| SemGCN [Zhao et al.]         | GTRoot | ERD (baseline) : 37.4 (40.7) | ERD (baseline) : 52.9 (56.6)    |
 
 
 ## Experiment
