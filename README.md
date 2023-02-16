@@ -20,7 +20,7 @@ We provide Pytorch code and pretrained model for reproduction. Experiments are c
 
 1. First, clone this repository:
     ```
-    git clone https://github.com/ky66111/ERD_3dpose.git
+    git clone https://github.com/kyang-06/ERD_3DPose.git
     cd ERD_3dpose
     ```
 2. Install requirements:
